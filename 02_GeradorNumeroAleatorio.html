@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital</title>
+    <link rel="stylesheet" href="css\02_GeradorNumeroAleatorio.css" />
+</head>
+<body>
+    <main>
+
+        <h1>Gerador de Números</h1>
+        <section>
+            <label for="min">Valor Mínimo</label>
+            <input type="number" name="min" id="min" required/>
+            
+            <label for="max">Valor Máximo</label>
+            <input type="number" name="max" id="max" required/>
+            
+            <button id="generate">Gerar Número</button>
+        </section>
+        
+        <div id="result">
+            <p>Número Gerado: <span id="randomNumber">---</span></p>
+            
+        </div>
+
+        <div>
+            <p>Histórico: <span id="history"> </span></p>
+        </div>
+        
+    </main>
+    <script src="js\02_GeradorNumeroAleatorio.js"></script>
+</body>
+</html>
