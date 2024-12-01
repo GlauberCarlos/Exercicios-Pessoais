@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+main {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 15px; /* Folga interna para espaço entre os botões e a borda da caixa */
+    border-radius: 10px; /* Cantos arredondados */
+    background-color: #4f4f4f; /* Fundo leve para contraste */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+    margin: 0 auto; /* Centraliza na página */
+}
+#button-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    padding: 15px; /* Folga interna para espaço entre os botões e a borda da caixa */
+    border-radius: 10px; /* Cantos arredondados */
+    background-color: #f9f9f9; /* Fundo leve para contraste */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+    margin: 0 auto; /* Centraliza na página */
+}
+
+#button {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 10px; /* Espaço entre botões */    
+    width: 280px; /* 4 colunas x 60px por botão + 3 gaps de 10px = 280px */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+#clear, #backspace {
+    background-color: red;
+}
+
+#clear:hover, #backspace:hover {
+    background-color: #b80101;
+}
+
+#divided, #times, #minus, #plus {
+    color: black;
+    background-color: greenyellow;
+}
+
+#divided:hover, #times:hover, #minus:hover, #plus:hover {
+    color: black;
+    background-color: rgb(146, 216, 41);
+}
+
+#equals {
+    background-color: green;
+}
+
+#equals:hover {
+    background-color: rgb(1, 110, 1);
+}
+
+#backspace, #comma  {
+    grid-column: span 2;
+}
+
+button {
+    font-weight: bolder;
+    width: 100%;  /* Largura fixa */
+    height: 60px; /* Altura fixa, igual à largura para formar um quadrado */
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result{
+    height: 100px;
+    color: black;
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    align-items: center; /* Alinha verticalmente */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    padding: 1px; /* Folga interna para espaço entre os botões e a borda da caixa */
+    border-radius: 10px; /* Cantos arredondados */
+    background-color: #f9f9f9; /* Fundo leve para contraste */
+}
