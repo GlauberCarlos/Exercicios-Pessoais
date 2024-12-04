@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+main {
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #4f4f4f;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#button-container {
+    display: flex;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    width: 390px;
+}
+
+button {
+    font-weight: bolder;
+    width: 150px;
+    height: 150px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px;
+    }
+
+#jogar {
+    background-color: #008165;
+}
+
+.clicked {
+    background-color: yellowgreen;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    height: 300px;
+    color: black;
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    padding: 1px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
