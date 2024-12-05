@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 main {
-    color: white;
-    font-size: 2rem;
     padding: 20px;
     border-radius: 5px;
     background-color: #4f4f4f;
-    width: fit-content;
+    width: 390px;
     margin: 0 auto;
 }
 
@@ -18,36 +16,49 @@ main {
 }
 
 button {
-    font-weight: bolder;
+    background-color: transparent;
+    align-items: center;
     width: 150px;
     height: 150px;
-    font-size: 1rem;
-    background-color: #007bff;
-    color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    text-align: center;
     margin: 20px;
     }
 
-#jogar {
-    background-color: #008165;
+button img {
+    width: 150px;
+    height: 150px;
 }
 
 .clicked {
-    background-color: yellowgreen;
+    animation: pulse 1s infinite;
+}
+
+.escolhaPC {
+    animation: pulse 1s infinite;
 }
 
 button:hover {
-    background-color: #0056b3;
+    transform: scale(1.1);
 }
 
-#result {
+button:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+#titulo {
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+#vencedor {
     height: 300px;
     color: black;
-    text-align: left;
-    font-size: 2rem;
+    text-align: center;
+    font-size: 2.0rem;
+    font-weight: bolder;
     margin-top: 30px;
     margin-bottom: 20px;
     display: flex;
@@ -56,4 +67,18 @@ button:hover {
     padding: 1px;
     border-radius: 10px;
     background-color: #f9f9f9;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+    }
+    
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
 }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 15 de JS Calcular Média</title>
+    <link rel="stylesheet" href="css/aula15.css" >
+</head>
+<body>
+<main id='tela-principal'>
+<section class='conteudo' id='formulario'>
+    <h1>Calcular Média</h1>
+
+<form action="#" method='POST'>
+
+    <!--
+    
+    action é o endereço para onde será enviado o formulário após ser preenchido,
+    como é só para teste, usamos o # para não ir a lugar nenhum.
+
+    method='POST' , é usado 'POST' para enviar os dados para um servidor.
+    existe também o 'GET' que é enviado no final da URL, (ex.: aabaa.com?nome=Joao&idade=25)
+
+    -->
+
+    <div class='form-group'>
+    <label for="nota1">Nota 1</label>
+    <input type="number" name="nota1" id="nota1" min='0.0' max='10.0' step="0.1" autofocus required onBlur='validarNumero(this)' />
+    </div>
+
+    <div class='form-group'>
+        <label for="nota2">Nota 2</label>
+        <input type="number" name="nota2" id="nota2" min='0.0' max='10.0' step="0.1" required onBlur='validarNumero(this)' />
+    </div>
+    
+    <!-- 
+        
+    o for= e name= têm valores iguais para associarem os valores entre si
+    
+    o autofocus serve para a caixa de texto vir selecionada assim que a página carrega, pronto para digitar o valor
+     
+    o required impede de o navegador enviar o formulário se estiver vazio (exibe uma msg)
+    
+    onBlur É um evento JavaScript que dispara quando o campo perde o foco, ou seja, quando o usuário sai do campo
+    
+    -->
+    
+    <div class='form-group'>
+    <button class='botao' id='btnCalcular' type="submit">Calcular</button>
+    <button type='reset' id='btnLimpar'>Limpar</button>
+    </div>
+
+    <div class='form-group'>
+    <label for="media">Média</label>
+    <input type="number" name="media" id="media" value='' readonly />
+    </div>
+
+    <div class="form-group">
+    <input type="text" name="situacao" class="cx" id="situacao" placeholder='Situação Final' readonly />
+    </div>
+</form>
+    <p id='aviso' class=''></p>
+</section>
+</main>
+<script src='js/aula15.js'></script>
+</body>
+</html>
