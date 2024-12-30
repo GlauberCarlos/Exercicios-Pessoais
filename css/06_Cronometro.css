@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color:darkolivegreen;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+#counter {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;    
+}
+
+#counter.running {
+    animation: pulse 1s infinite;
+}
+
+.button {
+    font-size: medium;
+    font-weight: bold;
+    color: antiquewhite;
+    background-color: rgb(8, 33, 0);
+    border: 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 30px 30px 0 30px;
+    width: 100px;
+    height: 30px;
+}
+
+.button:hover {
+    background-color: #27fb98;
+}
+
+ @keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+ }
