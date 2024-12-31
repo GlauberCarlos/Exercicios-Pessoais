@@ -3,10 +3,10 @@
 body {
     display: flex;
     flex-direction:column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin-top: 30px;
     background-color:darkolivegreen;
     color: white;
     font-family: "Roboto", sans-serif;
@@ -37,6 +37,12 @@ body {
 
 .button:hover {
     background-color: #27fb98;
+}
+
+#historyTitle {
+    font-size: 15pt;
+    font-weight: bold;
+    margin: 20px 20px 5px 20px;
 }
 
  @keyframes pulse {

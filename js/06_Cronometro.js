@@ -2,6 +2,7 @@
 let start = document.querySelector('#start');
 let reset = document.querySelector('#reset');
 let counter = document.querySelector("#counter");
+let historyTitle = document.querySelector("#historyTitle");
 let cents = 0;
 let seconds = 0;
 let minutes = 0;
@@ -9,15 +10,24 @@ let centsFormated = 0;
 let secondsFormated = 0;
 let timerId = null;
 let isRunning = false;
+let history = null;
+let historyList = null;
 
 start.addEventListener("click", function() 
 {
-    if(isRunning === true)
+    if(isRunning === true) // PAUSA O CRONOMETRO
     {
         clearInterval(timerId);
         document.getElementById("start").textContent = "Continue";
         counter.classList.remove("running");
         isRunning = false;
+
+        historyTitle.textContent = "Laps"
+
+        history = document.getElementById("history");
+        historyList = document.createElement("li");
+        historyList.textContent = counter.textContent;
+        history.appendChild(historyList);
     }
 
     else
@@ -36,6 +46,8 @@ reset.addEventListener("click", function()
     cents = 0;
     document.getElementById("counter").textContent = "00:00:00";
     document.getElementById("start").textContent = "Start";
+    history.replaceChildren();
+    historyTitle.textContent = ""
 })
 
 function updateClock(){
