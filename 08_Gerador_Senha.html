@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha</title>
+    <link rel="stylesheet" href="css/08_Gerador_Senha.css" />
+</head>
+<body>
+    <h1>Gerador de senha</h1>
+    <form>
+    <h3>Escolha os tipos de caracteres a incluir:</h3>
+    <label><input type="checkbox" id="maiBox" value="maiBox"> Letras maiúsculas (ABCD...)<br></label>
+    <label><input type="checkbox" id="minBox" value="minBox"> Letras minúsculas (abcd...)<br></label>
+    <label><input type="checkbox" id="numBox" value="numBox"> Números (1234...)<br></label>
+    <label><input type="checkbox" id="simBox" value="simBox"> Símbolos (/*-&%...)<br></label>
+
+    <div class="form-group">
+        <label for="lenghtSenha">Comprimento da senha: </label>
+        <input
+            type="number"
+            step="1"
+            min="0.0"
+            max="16"
+            name="lenghtSenha"
+            id="lenghtSenha"
+            class="input"
+            required
+        />
+    </div>
+
+    <div id="container">
+    <button type="button" id="btnGerar" onclick="gerarSenha()">Gerar</button>
+    </div>
+    
+    </form>
+
+    <div class="form-group">
+        <label for="senhaGerada">Senha: </label>
+        <input
+            type="text"
+            name="senhaGerada"
+            id="senhaGerada"
+            class="input"
+            value=''
+            disabled
+        />
+    </div>
+
+    <script src="js/08_Gerador_Senha.js"></script>
+</body>
+</html>

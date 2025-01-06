@@ -39,8 +39,24 @@ start.addEventListener("click", function()
     }
 })
 
-reset.addEventListener("click", function() 
+// parte do MODAL
+
+const modal = document.getElementById("reset-modal");
+const confirmReset = document.getElementById("confirm-reset");
+const cancelReset = document.getElementById("cancel-reset");
+
+reset.addEventListener("click", function() {
+    modal.style.display = "flex";
+});
+
+cancelReset.addEventListener("click", function() {
+    modal.style.display = "none";
+});
+
+confirmReset.addEventListener("click", function() 
 {
+    modal.style.display = "none";
+
     clearInterval(timerId);
     timerId = null;
     cents = 0;
@@ -49,6 +65,8 @@ reset.addEventListener("click", function()
     history.replaceChildren();
     historyTitle.textContent = ""
 })
+
+// funcao principal para rodar o cronometro
 
 function updateClock(){
     cents++;
