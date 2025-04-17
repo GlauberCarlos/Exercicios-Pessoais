@@ -1,8 +1,8 @@
 //
 let is12HourFormat = false;
 
-let btn12 = document.querySelector('#button12');
-let btn24 = document.querySelector('#button24');
+let btn12 = document.querySelector('#button12')
+let btn24 = document.querySelector('#button24')
 
 btn12.addEventListener("click", function() {
     is12HourFormat = true;

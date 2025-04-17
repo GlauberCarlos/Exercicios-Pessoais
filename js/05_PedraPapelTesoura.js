@@ -8,6 +8,8 @@ document.getElementById("pedra").addEventListener("click", function(){
   papel = false;
   tesoura = false;
   document.getElementById("pedra").classList.add("clicked");
+  document.getElementById("papel").classList.remove("clicked");
+  document.getElementById("tesoura").classList.remove("clicked");
 });
 
 document.getElementById("papel").addEventListener("click", function(){
@@ -15,6 +17,8 @@ document.getElementById("papel").addEventListener("click", function(){
   pedra = false;
   tesoura = false;
   document.getElementById("papel").classList.add("clicked");
+  document.getElementById("pedra").classList.remove("clicked");
+  document.getElementById("tesoura").classList.remove("clicked");
 });
 
 document.getElementById("tesoura").addEventListener("click", function(){
@@ -22,6 +26,8 @@ document.getElementById("tesoura").addEventListener("click", function(){
   pedra = false;
   papel = false;
   document.getElementById("tesoura").classList.add("clicked");
+  document.getElementById("papel").classList.remove("clicked");
+  document.getElementById("pedra").classList.remove("clicked");
 });
 
 // BOTAO JOGAR
@@ -41,7 +47,7 @@ document.getElementById("jogar").addEventListener("click", function()
   document.getElementById("jogar").disabled = true;
 
   const escolhaPC = Math.floor(Math.random () * 3); // 0 = Pedra, 1 = Papel, 2 = Tesoura
-  console.log (escolhaPC);
+  console.log ("escolha do PC " + escolhaPC);
 
   if (pedra == true)
   {
